@@ -1,5 +1,5 @@
 {
-  "name": "velis-eslint-config",
+  "name": "eslint-config-velis",
   "version": "1.0.0",
   "description": "Velis eslint reusable config",
   "main": "index.js",
