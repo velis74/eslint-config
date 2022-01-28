@@ -6,7 +6,7 @@
   "files": [
     "index.js"
   ],
-  "scripts": {},
+  "scripts": { "test": "exit 0"},
   "keywords": [
     "velis",
     "eslint",
