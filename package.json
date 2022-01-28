@@ -3,8 +3,10 @@
   "version": "1.0.1",
   "description": "Velis eslint reusable config",
   "main": "index.js",
-  "files": ["index.js"],
-  "scripts": { },
+  "files": [
+    "index.js"
+  ],
+  "scripts": {},
   "keywords": [
     "velis",
     "eslint",
@@ -22,5 +24,8 @@
     "eslint": ">=6.0.0",
     "eslint-plugin-es": ">=4.1.0",
     "eslint-plugin-vue": ">=8.3.0"
+  },
+  "devDependencies": {
+    "np": "^7.6.0"
   }
 }
