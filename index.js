@@ -2,13 +2,13 @@ module.exports = {
   root: true,
   env: { 'node': true },
   extends: [
-    'plugin:vue/essential',
-    'plugin:vue/strongly-recommended',
-    'plugin:vue/recommended',
+    'plugin:vue3/essential',
+    'plugin:vue3/strongly-recommended',
+    'plugin:vue3/recommended',
     '@vue/airbnb'
   ],
   plugins: ['es'],
-  parserOptions: { 'parser': 'babel-eslint' },
+  parserOptions: { 'parser': '@babel/eslint-parser' },
   rules: {
     'max-len': ['error', { 'code': 120 }],
     'no-console': 'off',
