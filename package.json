@@ -4,7 +4,8 @@
   "description": "Velis eslint reusable config",
   "main": "index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "tsconfig.json"
   ],
   "scripts": {
     "test": "exit 0"
