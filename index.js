@@ -9,7 +9,7 @@ module.exports = {
   ],
   plugins: ['es'],
   parserOptions: {
-    "project": ["./tsconfig.json", "./node_modules/eslint-config-velis/tsconfig.json"]
+    "project": "./node_modules/eslint-config-velis/tsconfig.json"
   },
   rules: {
     "vue/max-len": ["error", {
