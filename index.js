@@ -8,10 +8,10 @@ module.exports = {
     '@vue/eslint-config-airbnb-with-typescript'
   ],
   plugins: ['es'],
+  parserOptions: {
+    "project": "./tsconfig.json"
+  },
   rules: {
-    "parserOptions": {
-      "project": "./tsconfig.json"
-    },
     "vue/max-len": ["error", {
         "code": 120,
         "template": 120,
