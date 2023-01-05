@@ -8,13 +8,6 @@ module.exports = {
     '@vue/airbnb'
   ],
   plugins: ['es'],
-  parserOptions: {
-    'parser': 'vue-eslint-parser',
-    'parserOptions': {
-      parser: "@typescript-eslint/parser",
-      sourceType: "module"
-    },
-  },
   rules: {
     'max-len': ['error', { 'code': 120 }],
     'no-console': 'off',
