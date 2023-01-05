@@ -5,11 +5,16 @@ module.exports = {
     'plugin:vue/essential',
     'plugin:vue/strongly-recommended',
     'plugin:vue/recommended',
-    '@vue/airbnb'
+    '@vue/eslint-config-airbnb-with-typescript'
   ],
   plugins: ['es'],
   rules: {
-    'max-len': ['error', { 'code': 120 }],
+    "vue/max-len": ["error", {
+        "code": 120,
+        "template": 120,
+        "tabWidth": 200, // just so it fails when a tab is encountered
+        "comments": 120
+    }],
     'no-console': 'off',
     'no-plusplus': 'off',
     'sort-imports': 'off', // taken care of by vue plugin
