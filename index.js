@@ -9,6 +9,9 @@ module.exports = {
   ],
   plugins: ['es'],
   rules: {
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
     "vue/max-len": ["error", {
         "code": 120,
         "template": 120,
@@ -18,7 +21,11 @@ module.exports = {
     'no-console': 'off',
     'no-plusplus': 'off',
     'sort-imports': 'off', // taken care of by vue plugin
-    'import/extensions': ['error', 'always', { 'js': 'never', 'vue': 'never' }],
+    'import/extensions': ['error', 'always', {
+      'js': 'never',
+      'ts': 'never',
+      'vue': 'never',
+    }],
     'import/order': [
       'error', { 'newlines-between': 'always', 'alphabetize': { 'order': 'asc', 'caseInsensitive': true } }
     ],
