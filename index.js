@@ -9,7 +9,8 @@ module.exports = {
   ],
   plugins: ['es'],
   parserOptions: {
-    "project": "./node_modules/eslint-config-velis/tsconfig.json"
+    ecmaVersion: "es2018", // should match the one in tsconfig.json
+    "project": "./tsconfig.json"
   },
   rules: {
     "vue/max-len": ["error", {
