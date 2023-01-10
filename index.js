@@ -6,7 +6,6 @@ module.exports = {
     'plugin:vue/strongly-recommended',
     'plugin:vue/recommended',
     '@vue/eslint-config-airbnb-with-typescript',
-    'plugin:@typescript-eslint/recommended',
   ],
   plugins: ['es', '@typescript-eslint'],
   parserOptions: {
