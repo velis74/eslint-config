@@ -10,8 +10,10 @@ module.exports = {
   plugins: ['es', '@typescript-eslint'],
   parserOptions: {
     ecmaVersion: "esnext", // should match the one in tsconfig.json
-    "project": "./tsconfig.json"
+    project: "./tsconfig.json",
+    extraFileExtensions: [".vue"],
   },
+  ignorePatterns: ["dist/*", "coverage/*", "node_modules/*"],
   rules: {
     "vue/max-len": ["error", {
         "code": 120,
