@@ -24,6 +24,7 @@
   "peerDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
     "@vue/eslint-config-airbnb-with-typescript": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
     "@typescript-eslint/parser": "^5.48.0",
     "eslint": "^8.31.0",
     "eslint-plugin-es": "^4.1.0",

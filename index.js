@@ -5,11 +5,12 @@ module.exports = {
     'plugin:vue/essential',
     'plugin:vue/strongly-recommended',
     'plugin:vue/recommended',
-    '@vue/eslint-config-airbnb-with-typescript'
+    '@vue/eslint-config-airbnb-with-typescript',
+    'plugin:@typescript-eslint/recommended',
   ],
-  plugins: ['es'],
+  plugins: ['es', '@typescript-eslint'],
   parserOptions: {
-    ecmaVersion: "es2018", // should match the one in tsconfig.json
+    ecmaVersion: "esnext", // should match the one in tsconfig.json
     "project": "./tsconfig.json"
   },
   rules: {
@@ -31,6 +32,7 @@ module.exports = {
       'error', { 'newlines-between': 'always', 'alphabetize': { 'order': 'asc', 'caseInsensitive': true } }
     ],
     'indent': ['error', 2, { 'MemberExpression': 1 }],
+    "@typescript-eslint/indent": "off",
     'no-param-reassign': ['error', { 'props': false }],
     'prefer-destructuring': [
       'warn',
