@@ -23,6 +23,8 @@ module.exports = {
     }],
     'no-console': 'off',
     'no-plusplus': 'off',
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
     'sort-imports': 'off', // taken care of by vue plugin
     'import/extensions': ['error', 'always', {
       'js': 'never',
