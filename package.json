@@ -23,14 +23,16 @@
   },
   "peerDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
-    "@vue/eslint-config-airbnb-with-typescript": "^7.0.0",
     "@typescript-eslint/parser": "^5.48.0",
+    "@vue/eslint-config-airbnb-with-typescript": "^7.0.0",
     "eslint": "^8.31.0",
     "eslint-plugin-es": "^4.1.0",
     "eslint-plugin-vue": "^9.8.0",
     "vue-eslint-parser": "^9.1.0"
   },
   "devDependencies": {
+    "eslint": "^8.52.0",
+    "eslint-plugin-unicorn": "^48.0.1",
     "np": "^7.6.3"
   }
 }

@@ -7,7 +7,11 @@ module.exports = {
     'plugin:vue/recommended',
     '@vue/eslint-config-airbnb-with-typescript',
   ],
-  plugins: ['es', '@typescript-eslint'],
+  plugins: [
+    'es',
+    '@typescript-eslint',
+    'unicorn'
+  ],
   parserOptions: {
     ecmaVersion: "esnext", // should match the one in tsconfig.json
     project: "./tsconfig.json",
@@ -58,7 +62,14 @@ module.exports = {
     'vue/html-closing-bracket-spacing': ['error', { 'selfClosingTag': 'never' }],
     'vue/no-v-html': ['off'],
     'vue/max-attributes-per-line': ['warn', { 'singleline': { 'max': 10 } }],
-    'vue/singleline-html-element-content-newline': ['off']
+    'vue/singleline-html-element-content-newline': ['off'],
+
+    "unicorn/filename-case": [
+      "error",
+      {
+        "case": "kebabCase"
+      }
+    ]
   },
   overrides: [{ 'files': ['**/*.spec.{j,t}s?(x)'], 'env': { 'jest': true } }]
 };
