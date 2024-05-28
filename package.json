@@ -22,17 +22,16 @@
     "url": "git@github.com:velis74/eslint-config.git"
   },
   "peerDependencies": {
-    "@rushstack/eslint-patch": "^1.2.0",
-    "@typescript-eslint/parser": "^5.48.0",
-    "@vue/eslint-config-airbnb-with-typescript": "^7.0.0",
-    "eslint": "^8.31.0",
+    "@rushstack/eslint-patch": "^1.10.3",
+    "@typescript-eslint/parser": "^6.12.0",
+    "@vue/eslint-config-airbnb-with-typescript": "^8.0.0",
+    "eslint": "^8.57.0",
     "eslint-plugin-es": "^4.1.0",
-    "eslint-plugin-unicorn": "^48.0.1",
-    "eslint-plugin-vue": "^9.8.0",
-    "vue-eslint-parser": "^9.1.0"
+    "eslint-plugin-unicorn": "^53.0.0",
+    "eslint-plugin-vue": "^9.26.0",
+    "vue-eslint-parser": "^9.4.2"
   },
   "devDependencies": {
-    "eslint": "^8.52.0",
-    "np": "^7.6.3"
+    "np": "^10.0.5"
   }
 }
