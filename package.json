@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-velis",
-  "version": "1.1.16",
+  "version": "1.2.0",
   "description": "Velis eslint reusable config",
   "main": "index.js",
   "files": [
