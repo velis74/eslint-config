@@ -1,10 +1,11 @@
 {
   "name": "eslint-config-velis",
-  "version": "1.2.0",
+  "version": "2.0.9",
   "description": "Velis eslint reusable config",
-  "main": "index.js",
+  "type": "module",
+  "main": "eslint.config.mjs",
   "files": [
-    "index.js",
+    "eslint.config.mjs",
     "tsconfig.json"
   ],
   "scripts": {
@@ -23,15 +24,21 @@
   },
   "peerDependencies": {
     "@rushstack/eslint-patch": "^1.10.3",
-    "@typescript-eslint/parser": "^6.12.0",
-    "@vue/eslint-config-airbnb-with-typescript": "^8.0.0",
-    "eslint": "^8.57.0",
+    "@types/node": "^24.5.2",
+    "@typescript-eslint/eslint-plugin": "^8.29.0",
+    "@typescript-eslint/parser": "^8.29.0",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-es": "^4.1.0",
-    "eslint-plugin-unicorn": "^53.0.0",
-    "eslint-plugin-vue": "^9.26.0",
-    "vue-eslint-parser": "^9.4.2"
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.5",
+    "eslint-plugin-unicorn": "^58.0.0",
+    "eslint-plugin-vue": "^10.0.0",
+    "prettier": "^3.6.2",
+    "vue-eslint-parser": "^10.1.1"
   },
   "devDependencies": {
-    "np": "^10.0.5"
+    "np": "^10.2.0"
   }
 }
