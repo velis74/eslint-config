@@ -74,7 +74,6 @@ export default [
         'trailingComma': 'all',
         'bracketSpacing': true,
         'semi': true,
-        'experimentalTernaries': true,
         'endOfLine': 'auto',
         'arrowParens': 'always',
       }],
@@ -108,6 +107,7 @@ export default [
       ...typescript.configs.recommended.rules,
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'error',
+      '@typescript-eslint/no-explicit-any': 'off',
 
       // Import rules
       'sort-imports': 'off',
