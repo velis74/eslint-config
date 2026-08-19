@@ -5,8 +5,7 @@ import vue from 'eslint-plugin-vue';
 import vueParser from 'vue-eslint-parser';
 import prettier from 'eslint-plugin-prettier';
 import unicorn from 'eslint-plugin-unicorn';
-import importPlugin from 'eslint-plugin-import';
-import es from 'eslint-plugin-es';
+import importPlugin from 'eslint-plugin-import-x';
 
 export default [
   // Ignore patterns
@@ -55,11 +54,10 @@ export default [
       'vue': vue,
       'prettier': prettier,
       'unicorn': unicorn,
-      'import': importPlugin,
-      'es': es,
+      'import-x': importPlugin,
     },
     settings: {
-      'import/resolver': {
+      'import-x/resolver': {
         typescript: {
           project: './tsconfig.json'
         }
@@ -112,12 +110,12 @@ export default [
 
       // Import rules
       'sort-imports': 'off',
-      'import/extensions': ['error', 'always', {
+      'import-x/extensions': ['error', 'always', {
         'js': 'never',
         'ts': 'never',
         'vue': 'never',
       }],
-      'import/order': [
+      'import-x/order': [
         'error', { 'newlines-between': 'always', 'alphabetize': { 'order': 'asc', 'caseInsensitive': true } }
       ],
 
