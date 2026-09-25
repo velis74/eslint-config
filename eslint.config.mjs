@@ -72,6 +72,7 @@ export default [
         'semi': true,
         'endOfLine': 'auto',
         'arrowParens': 'always',
+        'htmlWhitespaceSensitivity': 'ignore',
       }],
 
       // Vue rules
