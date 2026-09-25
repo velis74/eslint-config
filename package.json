@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-velis",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Velis eslint reusable config",
   "type": "module",
   "main": "eslint.config.mjs",
@@ -36,5 +36,8 @@
     "eslint-plugin-vue": "^10.10.0",
     "prettier": "^3.9.6",
     "vue-eslint-parser": "^10.4.1"
+  },
+  "dependencies": {
+    "globals": "^17.12.0"
   }
 }

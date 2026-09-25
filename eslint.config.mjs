@@ -6,6 +6,8 @@ import vueParser from 'vue-eslint-parser';
 import prettier from 'eslint-plugin-prettier';
 import unicorn from 'eslint-plugin-unicorn';
 import importPlugin from 'eslint-plugin-import-x';
+import prettierConfig from 'eslint-config-prettier/flat';
+import globals from 'globals';
 
 export default [
   // Ignore patterns
@@ -16,7 +18,21 @@ export default [
   // Base JavaScript config
   js.configs.recommended,
 
-  // TypeScript config
+  // TypeScript and Vue presets
+  ...typescript.configs['flat/recommended'],
+  ...vue.configs['flat/recommended'],
+
+  // TypeScript already checks what these core rules check; the preset only covers .ts files
+  {
+    ...typescript.configs['flat/eslint-recommended'],
+    name: 'velis/typescript-eslint-recommended-vue',
+    files: ['**/*.vue'],
+  },
+
+  // Turns off rules that conflict with prettier; must precede the velis rules below
+  prettierConfig,
+
+  // Velis config
   {
     files: ['**/*.{js,ts,vue}'],
     languageOptions: {
@@ -29,29 +45,11 @@ export default [
         extraFileExtensions: ['.vue'],
       },
       globals: {
-        console: 'readonly',
-        process: 'readonly',
-        Buffer: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        exports: 'writable',
-        global: 'readonly',
-        module: 'readonly',
-        require: 'readonly',
-        window: 'readonly',
-        document: 'readonly',
-        navigator: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
-        setTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearTimeout: 'readonly',
-        clearInterval: 'readonly',
+        ...globals.browser,
+        ...globals.node,
       }
     },
     plugins: {
-      '@typescript-eslint': typescript,
-      'vue': vue,
       'prettier': prettier,
       'unicorn': unicorn,
       'import-x': importPlugin,
@@ -77,10 +75,6 @@ export default [
       }],
 
       // Vue rules
-      ...vue.configs.essential.rules,
-      ...vue.configs['strongly-recommended'].rules,
-      ...vue.configs.recommended.rules,
-
       'vue/max-len': ['error', {
         'code': 120,
         'template': 120,
@@ -102,7 +96,6 @@ export default [
       'vue/singleline-html-element-content-newline': ['off'],
 
       // TypeScript rules
-      ...typescript.configs.recommended.rules,
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'error',
       '@typescript-eslint/no-explicit-any': 'off',
@@ -144,20 +137,13 @@ export default [
     }
   },
 
-  // Jest/test files override
+  // Test files
   {
     files: ['**/*.spec.{j,t}s?(x)'],
     languageOptions: {
       globals: {
-        jest: 'readonly',
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly',
+        ...globals.jest,
+        ...globals.vitest,
       }
     }
   }
