@@ -93,7 +93,6 @@ export default [
         'math': 'always',
       }],
       'vue/no-v-html': ['off'],
-      'vue/max-attributes-per-line': ['warn', { 'singleline': { 'max': 10 } }],
       'vue/singleline-html-element-content-newline': ['off'],
 
       // TypeScript rules
